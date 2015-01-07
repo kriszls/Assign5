@@ -1,0 +1,130 @@
+// Kris Chan
+// Assign5 : Programme prints 12 days of Christmas song
+// using repetition and switch statements
+// switch statements print day and remainder of song verse
+
+import javax.swing.*;
+
+public class Assign5 {
+    
+    // main method begins execution of Java app
+    public static void main ( String args[] )
+    {
+    
+    
+        JTextArea songArea = new JTextArea(20, 30);
+        JScrollPane scroller = new JScrollPane(songArea);
+        String songString = "";
+    
+        for ( int day = 1; day <= 12; day++ ) {
+            songString += "\nOn the ";
+        
+            // add correct day to string
+            switch ( day ) {
+        
+            case 1:
+                songString += "first";
+                break;
+            
+            case 2:
+                songString += "second";
+                break;
+            
+            case 3:
+                songString += "third";
+                break;
+            
+            case 4:
+                songString += "third";
+                break;
+            
+            case 5:
+                songString += "fifth";
+                break;
+            
+            case 6:
+                songString += "sixth";
+                break;
+            
+            case 7:
+                songString += "seventh";
+                break;
+            
+            case 8:
+                songString += "eighth";
+                break;
+            
+            case 9:
+                songString += "ninth";
+                break;
+            
+            case 10:
+                songString += "tenth";
+                break;
+            
+            case 11:
+                songString += "eleventh";
+                break;
+            
+            case 12:
+                songString += "twelth";
+                break;
+            
+        }    // end switch
+        
+        songString += " day of Christmas, \n\tmy true love gave to me: \n";
+    
+        // add remainder of the verse to String
+        switch ( day ) {
+    
+            case 12:
+                songString += " \nTwelve lords-a-leaping, ";
+        
+                
+            case 11:
+                songString += " Eleven pipers piping, ";
+        
+            case 10:
+                songString += " Ten drummers drumming, ";
+        
+            case 9:
+                songString += " Nine ladies dancing, ";
+    
+            case 8:
+                songString += " Eight maids-a-milking, ";
+    
+            case 7:
+                songString += " Seven swans-a-swimming, ";
+    
+            case 6:
+                songString += " Six geese-a-laying, ";
+    
+            case 5:
+                songString += " Five golden rings. ";
+        
+            case 4:
+                songString += " Four calling birds, ";
+        
+            case 3:
+                songString += " Three French hens, ";
+        
+            case 2:
+                songString += " Two turtle doves, and";
+        
+            case 1:
+                songString += " \ta Partridge in a pear tree.\n";
+        
+        } // end switch
+    
+        
+    } // end for
+    
+    songArea.setText( songString );
+    JOptionPane.showMessageDialog(
+            null, scroller, "Twelve Days of Christmas",
+            JOptionPane.PLAIN_MESSAGE);
+    
+    } // end main method
+
+} // end class Assign5
+
